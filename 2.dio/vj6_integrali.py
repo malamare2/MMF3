@@ -55,6 +55,7 @@ def  gauleg(x1, x2, n):#n isto sta i N u drugim zad
         x.append(i)
         w.append(i)
     m = int((n+1)/2) #brojac jer trazimo samo pola jer su simetricne pa nije potrebno gledat obe strane
+    #br tocaka koje koristimo pri integraciji
     xm = (x2 + x1)/2 # sredina intervala
     xl = (x2 - x1)/2 #pola duljine intervala
     #pomoću xm i xl tecke se legendrovog polinoma pozicioniraju na traženi interval[x1, x2]
@@ -85,6 +86,55 @@ def  gauleg(x1, x2, n):#n isto sta i N u drugim zad
     return I
 
 print(gauleg(a, b, 10), gauleg(a, b, 50), gauleg(a, b, 100))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# (f = lambda * L)
+
+
+# def f(x):
+#     return (math.exp(x) + x**5)*L
+
+# a = -0.5
+# b = 2
+
+# L = b-a
+# #TRAPEZNA FORMULA   POVRSINA TRAPEZA
+# def trapez(N):#zadana jednadzba dakle integral je suma gornje vrijednosti + sredina l + donje vrijednosti pomnozene s (1/2)*h
+#     h = (b-a)/N
+#     l=((1/2)*(f(b)+f(a)))*h
+    
+#     for k in np.arange(1, N): #zasto je od a do b kad je definirano drugacije u formuli
+#         l += h*f(a+k*h) #na ovaj nacin sumira sve odma
+#     #zbroj = (1/2)*h*((f(a))+l+(f(b))) 
+#     return(l)
+
+# print(trapez(10))
+
+
+# #SIMPSONOVA FORMULA
+# def simpson(N):#zadana jednadzba dakle integral je suma gornje vrijednosti + sredina l + donje vrijednosti pomnozene s (1/2)*h
+#     h = (b-a)/N
+#     l=((f(b)+f(a)))
+#     for k in np.arange(1, N): #zasto je od a do b kad je definirano drugacije u formuli
+#         if k%2 == 0:
+#             l += 2*f(a+k*h) #na ovaj nacin sumira sve odma
+#         elif k%2 != 0:
+#             l += 4*f(a+k*h)
+#     #zbroj = (1/2)*h*((f(a))+l+(f(b))) 
+#     return(l*(h/3))
+# print(simpson(10))
 
 
 
